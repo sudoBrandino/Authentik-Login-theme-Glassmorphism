@@ -2037,10 +2037,10 @@ ak-app-icon[size="pf-v5-m-lg"]{
     cursor: pointer;
 }
 
-/* Separator "ou" above buttons */
+/* Separator above buttons */
 .pf-c-login__main-footer-links::before,
 .pf-v5-c-login__main-footer-links::before{
-    content: "────────  ou  ────────";
+    content: "────────  or  ────────";
     display: block;
     width: 100%;
     color: #b8bbc2;
