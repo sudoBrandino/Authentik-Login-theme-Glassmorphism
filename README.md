@@ -2,9 +2,10 @@
 
 A custom **glassmorphism** login theme for [Authentik](https://goauthentik.io/), designed by **VULGA**.
 
-> ✅ Tested and fully compatible with **Authentik version 2025.10.3** (Latest)
+> ✅ Tested and fully compatible with **Authentik version 2025.10.3** (Latest)  
+> ✅ Compatible with both **PatternFly v4** and **PatternFly v5** (Authentik 2024.x+)
 
-## ✨ Features (v3.0)
+## ✨ Features (v3.1)
 
 - **Modern Glassmorphism Design**: A complete visual overhaul for a premium look.
 - **Full Responsiveness**: Optimized for all devices, including mobile/phones.
@@ -12,6 +13,7 @@ A custom **glassmorphism** login theme for [Authentik](https://goauthentik.io/),
 - **User Settings Redesign**: Beautiful and responsive user settings and profile management.
 - **Admin Panel Safe**: Specific styling isolation ensures the Admin Interface remains untouched and bug-free.
 - **Easy Customization**: Simple variables to change background and accent colors.
+- **PatternFly v5 Support**: Dual-targeting of both `pf-c-*` (PF4) and `pf-v5-c-*` (PF5) class names for forward compatibility with newer Authentik versions.
 
 ## 📸 Login Preview
 <img width="2478" height="1115" alt="login" src="https://github.com/user-attachments/assets/c5237f16-88c7-40d1-a5f7-1afbc7ffb823" />
@@ -33,9 +35,27 @@ Feel free to use, modify, or extend the theme.
 ## 🚀 Installation
 
 1. Clone or download this repository.
-2. Copy the CSS file into your Authentik custom theme section:
+2. Copy the CSS file content into your Authentik custom theme section:
    - Admin → System → Brands → Choose your brand and edit it → Brand settings → Custom CSS
+3. Optionally customize the easy customization variables at the top of the CSS file (background image, accent color, separator text).
 4. Save and refresh the login page.
+
+## 🎨 Customization
+
+At the top of `theme.css`, you can change these variables:
+
+```css
+:root {
+    /* Background image URL */
+    --ak-flow-background: url(https://i.imgur.com/zMTDTxy.jpeg);
+
+    /* Separator text shown above social login buttons */
+    --ak-social-separator-text: "or";
+
+    /* Accent color */
+    --ak-accent: #d0ced0;
+}
+```
    
 ## ⚠️ Cloudflare Notice
 
