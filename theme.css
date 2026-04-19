@@ -22,6 +22,7 @@
     color: white !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     border-radius: 12px !important;
     padding: 8px 16px !important;
     display: flex !important;
@@ -97,7 +98,7 @@
     object-fit: contain !important;
 }
 
-/* Réduire la taille du texte explicatif sur la page TOTP */
+/* Reduce explanatory text size on the TOTP page */
 :host(ak-stage-authenticator-totp) .pf-c-form__group:not([hidden]) p,
 :host(ak-stage-authenticator-totp) .pf-c-form__group:not([hidden]) li,
 :host(ak-stage-authenticator-totp) .pf-v5-c-form__group:not([hidden]) p,
@@ -108,7 +109,7 @@
     margin-bottom: 8px !important;
 }
 
-/* Réduire un peu le titre du QR code container si présent */
+/* Slightly reduce the QR code container title if present */
 :host(ak-stage-authenticator-totp) .pf-c-form__group label,
 :host(ak-stage-authenticator-totp) .pf-v5-c-form__group label{
     font-size: 14px !important;
@@ -293,7 +294,6 @@
     position: relative !important;
     z-index: 2 !important;
 }
-
 
 
 :host(ak-stage-user-login) .pf-c-button.pf-m-primary::after,
@@ -486,8 +486,6 @@
         0 0 0 2px rgba(66, 133, 244, 0.2) !important;
 }
 
-
-
 :host(ak-stage-user-login) .pf-c-button.pf-m-primary::after,
 :host(ak-stage-user-login) .pf-c-button.pf-m-secondary::after,
 :host(ak-stage-user-login) .pf-v5-c-button.pf-v5-m-primary::after,
@@ -602,6 +600,7 @@ ul.pf-v5-c-list.pf-v5-m-inline,
     box-sizing: border-box;
     background: transparent !important;
     backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 66px !important;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(255, 255, 255, 0.05) 0px 1px 0px inset !important;
@@ -627,7 +626,7 @@ ul.pf-v5-c-list.pf-v5-m-inline,
     /* Ensure it shrinks to content */
 }
 
-/* Overlay de chargement avec le même arrondi */
+/* Loading overlay with matching border-radius */
 ak-loading-overlay {
     border-radius: 66px !important;
     overflow: hidden !important;
@@ -842,8 +841,6 @@ ak-loading-overlay {
     /* Force height */
     padding-top: 12px !important;
     padding-bottom: 12px !important;
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
 }
 
 /* FIX: Disconnect Button (Danger) in User Settings */
@@ -919,10 +916,7 @@ ak-loading-overlay {
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
     color: white !important;
-    color: white !important;
 }
-
-/* KEY ICON & GLITCH FIX */
 /* Repurpose ::before to be a Key Icon instead of a glitchy bar */
 :host(ak-stage-identification) .pf-c-button.pf-m-secondary::before,
 :host(ak-stage-password) .pf-c-button.pf-m-secondary::before,
@@ -1006,6 +1000,7 @@ ak-loading-overlay {
 .pf-v5-c-login__main-footer-band{
     background: transparent !important;
     backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: none !important;
     box-shadow: none !important;
     margin-top: 10px !important;
@@ -1223,15 +1218,6 @@ ak-loading-overlay {
     --pf-c-page__main-section--BackgroundColor: transparent !important;
 }
 
-/* DASHBOARD TRANSPARENCY FIX */
-/* Force variables to transparent inside the library/dashboard host AND user interface wrapper */
-:host(ak-library-impl),
-:host(ak-interface-user) {
-    --pf-global--BackgroundColor--100: transparent !important;
-    --pf-c-page--BackgroundColor: transparent !important;
-    --pf-c-page__main-section--BackgroundColor: transparent !important;
-}
-
 /* Force specific containers to be transparent in dashboard */
 :host(ak-library-impl) .pf-c-page,
 :host(ak-library-impl) .pf-c-page__main,
@@ -1340,6 +1326,7 @@ ak-loading-overlay {
     border: 1px solid var(--pf-c-form-control--BorderColor, #ccc) !important;
     border-radius: var(--pf-c-form-control--BorderRadius, 3px) !important;
     backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     box-shadow: none !important;
     color: var(--pf-c-form-control--Color, initial) !important;
 }
@@ -1428,6 +1415,7 @@ ak-loading-overlay {
     background: rgba(255, 255, 255, 0.08) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     border-radius: 20px !important;
 }
@@ -1459,7 +1447,6 @@ ak-loading-overlay {
 :host(ak-library-impl) .pf-c-card__body,
 :host(ak-library-impl) .pf-v5-c-card__title,
 :host(ak-library-impl) .pf-v5-c-card__body{
-    color: white !important;
     color: white !important;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
@@ -1629,7 +1616,8 @@ ak-loading-overlay {
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     color: white !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
     border-radius: 6px !important;
 }
 
@@ -1722,7 +1710,6 @@ ak-chip,
 }
 
 
-
 :host(ak-user-consent-list) ak-chip::part(chip),
 :host(ak-user-token-list) ak-chip::part(chip),
 :host(ak-user-settings-mfa) ak-chip::part(chip),
@@ -1809,7 +1796,6 @@ ak-app-icon[size="pf-v5-m-lg"]{
 }
 
 
-
 .pf-c-label.pf-m-green,
 .pf-v5-c-label.pf-v5-m-green{
     --pf-c-label--BackgroundColor: #1c1c1c !important;
@@ -1844,10 +1830,6 @@ ak-app-icon[size="pf-v5-m-lg"]{
 /* ========================================= */
 
 
-
-
-
-
 .pf-c-login__main-footer-links,
 .pf-v5-c-login__main-footer-links{
     margin-top: 0 !important;
@@ -1858,7 +1840,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
     flex-wrap: wrap !important;
 }
 
-/* Custom CSS-only Separator "Ou" */
+/* Custom CSS-only Separator */
 .pf-c-login__main-footer-links::before,
 .pf-v5-c-login__main-footer-links::before{
     content: var(--ak-social-separator-text) !important;
@@ -1872,7 +1854,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
     margin-top: 10px !important;
     font-weight: 400 !important;
 
-    /* The Line Trick: Solid White & Balanced Gap for "Continuer avec" */
+    /* The Line Trick: Solid White & Balanced Gap */
     background: linear-gradient(to right,
             rgba(255, 255, 255, 1) 0%,
             rgba(255, 255, 255, 1) 32%,
@@ -1905,24 +1887,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
 .pf-c-login__main-footer-links-item-link svg,
 .pf-v5-c-login__main-footer-links-item-link i,
 .pf-v5-c-login__main-footer-links-item-link svg{
-    /* Revert to slightly larger icon since text is gone */
-    font-size: 24px !important;
-    width: 24px !important;
-    height: 24px !important;
-    text-align: center !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-
-/* Resize the icon (FontAwesome or SVG) */
-.pf-c-login__main-footer-links-item-link i,
-.pf-c-login__main-footer-links-item-link svg,
-.pf-v5-c-login__main-footer-links-item-link i,
-.pf-v5-c-login__main-footer-links-item-link svg{
     font-size: 18px !important;
-    /* Reduce specific icon size */
     width: 18px !important;
     height: 18px !important;
     text-align: center !important;
@@ -2055,7 +2020,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
 /* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
 
-    /* Force le background de la page sur mobile */
+    /* Force the page background on mobile */
     .pf-c-page,
     body,
     .pf-c-login .pf-c-page,
@@ -2074,7 +2039,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         overflow: hidden !important;
     }
 
-    /* Background flouté sur un pseudo-élément */
+    /* Blurred background on a pseudo-element */
     .pf-c-page::before,
     body::before,
     .pf-c-login .pf-c-page::before,
@@ -2097,7 +2062,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         z-index: -1 !important;
     }
 
-    /* Force .pf-c-login à prendre toute la largeur sur mobile */
+    /* Force .pf-c-login to take the full width on mobile */
     .pf-c-login {
         width: 100vw !important;
         max-width: 100vw !important;
@@ -2115,7 +2080,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         overflow-y: auto !important;
     }
 
-    /* Supprime le scroll et margin en bas */
+    /* Remove scroll and bottom margin */
     body,
     html {
         overflow-x: hidden !important;
@@ -2125,7 +2090,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         height: 100vh !important;
     }
 
-    /* Box login plein écran sur mobile - TRANSPARENTE */
+    /* Full-screen login box on mobile - TRANSPARENT */
     .pf-c-login .pf-c-login__container,
     body .pf-c-login .pf-c-login__container,
     body:has(.pf-c-login) .pf-c-login__container {
@@ -2171,7 +2136,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         padding: 30px 20px !important;
         min-height: auto !important;
         max-height: none !important;
-        /* Complètement transparent - juste le contenu */
+        /* Fully transparent - content only */
         background: transparent !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
@@ -2185,14 +2150,14 @@ ak-app-icon[size="pf-v5-m-lg"]{
         margin-bottom: auto !important;
     }
 
-    /* Supprime les espaces du footer */
+    /* Remove footer spacing */
     .pf-c-login__footer,
     .pf-c-login__main-footer {
         padding-bottom: 0 !important;
         margin-bottom: 0 !important;
     }
 
-    /* Boutons plus grands sur mobile */
+    /* Larger buttons on mobile */
     .pf-c-login .pf-c-form__actions button:first-child,
     .pf-c-login .pf-c-form__group-control button:first-child,
     :host(ak-stage-identification) .pf-c-button.pf-m-primary,
@@ -2202,7 +2167,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         font-size: 16px !important;
     }
 
-    /* Inputs plus grands */
+    /* Larger inputs on mobile */
     :host(ak-stage-identification) .pf-c-form-control,
     :host(ak-stage-password) .pf-c-form-control,
     :host(ak-stage-identification) input:not([type="checkbox"]),
@@ -2212,16 +2177,13 @@ ak-app-icon[size="pf-v5-m-lg"]{
         min-height: 50px !important;
     }
 
-    /* Boutons sociaux alignés horizontalement (max 4 par ligne) */
+    /* Social buttons aligned horizontally (max 4 per row) */
     .pf-c-login__main-footer-links {
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 10px !important;
     }
-
-
-
 
 
     .pf-c-login__main-footer-links-item button {
@@ -2244,7 +2206,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         height: 18px !important;
     }
 
-    /* Overlay de chargement plein écran sur mobile */
+    /* Full-screen loading overlay on mobile */
     ak-loading-overlay {
         border-radius: 0 !important;
     }
@@ -2253,15 +2215,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
     /* === FIX DASHBOARD MOBILE (Background) === */
     /* ========================================= */
 
-    /* ========================================= */
-    /* === FIX DASHBOARD MOBILE (Background) === */
-    /* ========================================= */
-
-    /* ========================================= */
-    /* === FIX DASHBOARD MOBILE (Background) === */
-    /* ========================================= */
-
-    /* Force l'image de fond visible sur html/body/dashboard */
+    /* Force the background image to be visible on html/body/dashboard */
     html,
     body,
     :host(ak-interface-user),
@@ -2294,7 +2248,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         border-radius: 20px !important;
     }
 
-    /* Mais garde la transparence sur les conteneurs intermédiaires */
+    /* Keep transparency on intermediate containers */
     :host(ak-library-impl) .pf-c-page,
     :host(ak-library-impl) .pf-c-page__main,
     .pf-c-page__main,
@@ -2311,14 +2265,14 @@ ak-app-icon[size="pf-v5-m-lg"]{
     /* === FIX DASHBOARD MOBILE (Grid 2 cols) == */
     /* ========================================= */
 
-    /* Force 2 colonnes pour la grille d'apps sur mobile */
+    /* Force 2-column grid for apps on mobile */
     :host(ak-library-impl) .pf-l-gallery {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px !important;
     }
 
-    /* Ajuste la taille des cartes pour qu'elles rentrent */
+    /* Adjust card size to fit properly */
     :host(ak-library-impl) .pf-c-card.pf-m-hoverable {
         min-height: 120px !important;
         padding: 10px !important;
@@ -2326,7 +2280,7 @@ ak-app-icon[size="pf-v5-m-lg"]{
         max-width: 100% !important;
     }
 
-    /* Réduit un peu la taille de l'icône dans la carte si nécessaire */
+    /* Slightly reduce the icon size in the card if needed */
     :host(ak-library-impl) .pf-c-card__body img {
         max-width: 40px !important;
         max-height: 40px !important;
